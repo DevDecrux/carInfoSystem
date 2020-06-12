@@ -47,7 +47,7 @@ export default {
         {
           label: 'Date',
           field: 'Date',
-          type: 'date',
+          type: 'String',
           dateInputFormat: 'yyyy-MM-dd',
           dateOutputFormat: 'MMM dd yyyy'
         },
