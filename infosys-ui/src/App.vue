@@ -4,7 +4,7 @@
       <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link> |
       <router-link to="/meteo-info">Meteo Info</router-link>
-	  <a href="https://www.rsai.ml/">HMI CarPlay</a>
+      <a href="https://www.rsai.ml/">HMI CarPlay</a>
     </div>
     <router-view/>
   </div>
