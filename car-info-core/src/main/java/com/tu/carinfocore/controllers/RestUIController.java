@@ -19,7 +19,8 @@ public class RestUIController {
     @Autowired
     private MeteoInfoManager meteoManager;
 
-    @RequestMapping(value = "/get-meteo-info", produces = MediaType.APPLICATION_JSON_VALUE, method = RequestMethod.GET)
+    @RequestMapping(value = "/get-meteo-info", produces = MediaType.APPLICATION_JSON_VALUE, 
+    method = RequestMethod.GET)
     public List<MeteoInfoDTO> getMeteoinfo() {
         List<MeteoInfoDTO> dtos = new ArrayList<>();
         Iterable<MeteoInfoEntity> entities = meteoManager.getMeteoEntities();
