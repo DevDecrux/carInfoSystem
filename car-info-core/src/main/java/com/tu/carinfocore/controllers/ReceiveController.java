@@ -16,7 +16,8 @@ public class ReceiveController {
     @Autowired
     private MeteoInfoManager meteoManager;
 
-    @RequestMapping(value = "/receiveMeteoInfo", consumes = MediaType.APPLICATION_JSON_VALUE, method = RequestMethod.POST)
+    @RequestMapping(value = "/receiveMeteoInfo", consumes = MediaType.APPLICATION_JSON_VALUE, 
+    method = RequestMethod.POST)
     public boolean receiveMeteoInfo(@RequestBody MeteoInfoDTO dto) {
         MeteoInfoEntity entity = Converter.convertMeteoInfoDTO2MeteoInfoEntity(dto);
         return meteoManager.saveMeteoInfo2DB(entity);
