@@ -1,6 +1,8 @@
 package com.tu.carinfocore.utils;
 
+import com.tu.carinfocore.persistance.dto.CodesInfoDTO;
 import com.tu.carinfocore.persistance.dto.MeteoInfoDTO;
+import com.tu.carinfocore.persistance.entities.CodesEntity;
 import com.tu.carinfocore.persistance.entities.MeteoInfoEntity;
 
 public class Converter {
@@ -24,6 +26,20 @@ public class Converter {
         dto.setTvoc(entity.getTvoc());
         dto.setDate(entity.getDate());
         dto.setHours(entity.getHours());
+        return dto;
+    }
+
+    public static CodesEntity convertCodesInfoDTO2CodesEntity(CodesInfoDTO dto) {
+        CodesEntity entity = new CodesEntity();
+        entity.setCode(dto.getCode());
+        entity.setDescCode(dto.getDescCode());
+        return entity;
+    }
+
+    public static CodesInfoDTO convertCodesEntities2CodesDTO(CodesEntity entity) {
+        CodesInfoDTO dto = new CodesInfoDTO();
+        dto.setCode(entity.getCode());
+        dto.setDescCode(entity.getDescCode());
         return dto;
     }
 }
